@@ -19,7 +19,7 @@ public class Solution {
       a[i] = Integer.parseInt(s[i]);
       dp[a[i]] = 1;
     }
-    int ans = 0;
+    int ans = 1;
     for (int i = n - 1; i >= 0; i--) {
       for (int j = 2 * a[i]; j < N; j += a[i]) {
         dp[a[i]] = Math.max(dp[a[i]], dp[j] + 1);
