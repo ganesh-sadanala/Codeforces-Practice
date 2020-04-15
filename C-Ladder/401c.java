@@ -19,11 +19,13 @@ public class Codeforces {
       System.out.println(-1);
       return;
     } // zeros ekkuva untey 010 follow avvali (nenu edhi follow avvaley)
+
+    StringBuffer str = new StringBuffer("");
     if (n >= m) {
       for (int i = 0; i < m; i++)
-        System.out.print("01");
+        str.append("01");
       for (int i = 0; i < n - m; i++)
-        System.out.print("0");
+        str.append("0");
     } // else if ones ekkuva untey 110 (edhi okkatey follow ayyanu , modhu other cases
       // kuda consider chey)
 
@@ -32,17 +34,17 @@ public class Codeforces {
       for (int i = 0; i < n; i++) {
         // consider T5 for this cond.
         if (j <= (m - n)) {
-          System.out.print("1");
+          str.append("1");
           j++;
         }
-        System.out.print("10");
+        str.append("10");
       }
 
       for (int i = 0; i < m - 2 * n; i++)
-        System.out.print("1");
+        str.append("1");
     }
 
-    System.out.println();
+    System.out.println(str);
   }
 
   public static void main(String[] args) throws java.lang.Exception {
