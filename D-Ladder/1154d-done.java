@@ -1,6 +1,7 @@
 // Everything is good initially
 // Only point i did not get greedily is
 // If we can recharge the accumulator (the current segment is exposed and the current charge of accumulator is lower than its initial charge), let's do it
+// If the accumalator is full no matter what the sun status is, if the battery has some power increase it
 
 import java.util.*;
 import java.io.*;
