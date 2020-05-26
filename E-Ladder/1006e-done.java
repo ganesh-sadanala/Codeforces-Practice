@@ -29,6 +29,7 @@ public class Graph
     static void addEdge(int src,int dest)
     {
         edg.get(src).add(dest);
+	edg.get(dest).add(src);
     }
     public static void main (String[] args) throws java.lang.Exception
 	{
