@@ -1,6 +1,6 @@
 /*
  * Mistake: Don't blindly go with binary search every time when u find array is
- * sorted. See the size (It is 5). Apply brute force, Time complexity : O(5*n)
+ * sorted (check the monotonicity). See the size (It is 5). Apply brute force, Time complexity : O(5*n)
  */
 
 /*
