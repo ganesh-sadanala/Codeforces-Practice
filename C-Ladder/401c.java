@@ -4,7 +4,10 @@
 // Where i have failed -> In finding the base case
 // take min 0's when failed
 // 5 one's and 1 zero => m>2*n+2         110111
-// 3 zero's and 1 one => n>m+1           100
+// 4 zero's and 2 one => n>m+1           010100
+
+// The idea is for two zero there should be min. 1 one => if (m == n - 1) then we derive the ones and zeros in one, but we must start from zero.
+
 
 // else /...
 
