@@ -15,11 +15,27 @@ using namespace std;
 #define endl "\n"
 #define mp make_pair
 
+ll m = 1e9 + 7;
+ll p(ll x, ll y)
+{
+  ll res = 1;
+  while (y > 0)
+  {
+    if (y & 1)
+      res = ((res % m) * (x % m)) % m;
+
+    y >>= 1;
+    x = ((x % m) * (x % m)) % m;
+  }
+  return res % m;
+}
+
 void solve()
 {
   ll n;
   cin >> n;
-  cout << pow(3, 3 * n) - pow(7, n) << endl;
+  ll ans = (p(3, 3 * n) % m - p(7, n) % m + m) % m;
+  cout << ans << endl;
 }
 int main()
 {
